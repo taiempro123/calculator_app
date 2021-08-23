@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --title_display : #ffffff;
+  --button: #F43B86;
+  --backgroundCal: #3D087B;
+  --background:#11052C;
+  --button-result: #FFE459;
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+body{
+  background-color: var(--background);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.calculator{
+
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--backgroundCal);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 7px 100px rgba(207, 238, 69, 0.5);
+
+}
+
+.display-result{
+  background-color: var(--title_display);
+  text-align: right;
+  padding: 20px;
+  font-size:24px;
+  font-weight: bold;
+
+}
+
+button{
+  appearance: none;
+  border-radius: 15px;
+  color: var(--button);
+  font-size: 20px;
+  background-color:#FFE459;
+  font-weight: bold;
+  cursor: pointer;
+  padding:16px;
+  transition: all 0.4s;
+}
+
+button:hover{
+  opacity: 0.7;
+}
+
+.oparator{
+  display: flex;
+}
+
+.oparator button {
+  flex: 1 1 0%;
+  background: rgb(0, 0, 0);
+
+
+}
+
+.digits{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+}
+
+
+
