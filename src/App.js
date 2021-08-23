@@ -27,6 +27,7 @@ function App() {
 
     const calculator = () => {
       setCalc(eval(calc).toString());
+      setResult("");
     }
 
     const del = () => {
